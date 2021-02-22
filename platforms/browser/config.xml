@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.sayvers.app" version="1.0.2" xmlns="http://www.w3.org/ns/widgets" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Sayvers</name>
+    <description>
+        An app that enables you make profit from your investments
+    </description>
+    <author email="info@sayvers.com" href="https://sayvers.com">
+        Sayvers Team
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+</widget>

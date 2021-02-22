@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Sayvers",
+  "short_name": "Sayvers",
+  "version": "com.sayvers.app",
+  "description": "An app that enables you make profit from your investments",
+  "author": "Sayvers Team",
+  "icons": [],
+  "start_url": "index.html",
+  "theme_color": "#2196f3"
+}

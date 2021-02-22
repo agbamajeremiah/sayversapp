@@ -1,0 +1,156 @@
+<template>
+    <div class="page page-homepage light" data-name="homepage">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only panel-open" data-panel="left">
+                        <span class="new-notification"></span>
+                        <i class="icon material-icons">menu</i>
+                    </a>
+                </div>
+                <div class="title sliding">Account Overview</div>
+                <div class="right">
+                    <a href="/noticationslist/" class="link icon-only">
+                        <i class="material-icons">notifications_none</i><span class="counts">1</span>
+                    </a>
+                </div>
+                <div class="title-large">
+                    <div class="title-large-text">Account Overview</div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="block">
+                <div class="card bg-template shadow mt-4 h-190">
+                    <div class="card-content card-content-padding">
+                        <div class="row">
+                            <div class="col-auto">
+                                <figure class="avatar avatar-60"><img src="img/user1.png" alt=""></figure>
+                            </div>
+                            <div class="col pl-0 align-self-center">
+                                <h5 class="mb-1 mt-0">Tolu Adams</h5>
+                                <p class="text-mute small my-0">Active</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block top-124">
+                <div class="card mb-4 shadow">
+                    <div class="card-content card-content-padding border-bottom">
+                        <div class="row">
+                            <div class="col">
+                                <h3 class="my-0 font-weight-normal">${{ balance }}</h3>
+                                <p class="text-mute my-0">Total Balance</p>
+                            </div>
+                            <div class="col-auto">
+                                <button class="button button-fill button-raised color-default button-rounded-54 popup-open" data-popup=".addmoneyr"><i class="material-icons">add</i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content card-content-padding bg-none">
+                        <div class="row">
+                            <div class="col text-align-right">
+                                <p>${{loss}} <i class="material-icons text-color-red vm small">arrow_downward</i></p>
+                            </div>
+                            <div class="col border-left-dotted">
+                                <p><i class="material-icons text-color-green vm small mr-1">arrow_upward</i>${{gain}} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="card shadow bg-template border-0 col" style="margin-left: 10px; margin-right: 10px">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-align-center"><a class="popup-open" style="color: #fff" data-popup=".addmoney">Fund</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow bg-template border-0 col" style="margin-left: 20px; margin-right: 10px">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="text-align-center"><a class="popup-open" style="color: #fff" data-popup=".paymoney">Withdraw</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block mb-0 mt-2">
+                <div class="card shadow mt-2 h-200 o-hidden">
+                    <div class="h-200">
+                        <canvas id="linechart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <h6 class="block-title">Actions <a href="allpayment.html" class="float-right small">View All</a></h6>
+            
+ 
+
+            <div class="block px-0">
+                <!-- Swiper -->
+                <div class="swiper-container offer-slide swiper-init" data-space-between="0" data-slides-per-view="auto">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card shadow border-0 bg-template mt-0 mb-3">
+                                <div class="card-content card-content-padding py-2 link o-hidden">
+                                    <div class="row">
+                                        <div class="col-auto pr-0">
+                                            <img src="img/graphics-carousel-scheme1.png" alt="" class="mw-100">
+                                        </div>
+                                        <div class="col align-self-center">
+                                            <h5 class="mb-0 mt-0 font-weight-normal">Gold loan scheme</h5>
+                                            <p class="text-mute mt-1">Get all money at market rate of gold</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="swiper-slide">
+                            <div class="card shadow border-0 bg-template mt-0 mb-3">
+                                <div class="card-content card-content-padding py-2 link o-hidden">
+                                    <div class="row">
+                                        <div class="col pr-0 align-self-center">
+                                            <h5 class="mb-0 mt-0 font-weight-normal">Gold loan scheme</h5>
+                                            <p class="text-mute mt-1">Get all money at market rate of gold</p>
+                                        </div>
+                                        <div class="col-auto">
+                                            <img src="img/graphics-carousel-scheme1.png" alt="" class="mw-100">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    return {
+        data: function(){
+            return {
+                balance: '20,000',
+                gain: '10,750.00',
+                loss: '0.00'
+            }
+        },
+
+        methods: {
+            
+        }
+    }
+</script>
+

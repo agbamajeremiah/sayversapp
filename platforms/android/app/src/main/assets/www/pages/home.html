@@ -1,0 +1,180 @@
+<template>
+    <div class="page page-homepage light" data-name="homepage">
+        <div class="navbar">
+            <div class="navbar-inner">
+                <div class="left">
+                    <a href="#" class="link icon-only panel-open" data-panel="left">
+                        <span class="new-notification"></span>
+                        <i class="icon material-icons">menu</i>
+                    </a>
+                </div>
+                <div class="title sliding">Account Overview</div>
+                <div class="right">
+                    <a href="/noticationslist/" class="link icon-only">
+                        <i class="material-icons">notifications_none</i><span class="counts">1</span>
+                    </a>
+                </div>
+                <div class="title-large">
+                    <div class="title-large-text">Account Overview</div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="block">
+                <div class="card bg-template shadow mt-4 h-190">
+                    <div class="card-content card-content-padding">
+                        <div class="row">
+                            <div class="col-auto">
+                                <figure class="avatar avatar-60"><img src="img/user1.png" alt=""></figure>
+                            </div>
+                            <div class="col pl-0 align-self-center">
+                                <h5 class="mb-1 mt-0">Tolu Adams</h5>
+                                <p class="text-mute small my-0">Active</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="block top-124">
+                <div class="card mb-4 shadow">
+                    <div class="card-content card-content-padding border-bottom">
+                        <div class="row">
+                            <div class="col">
+                                <p class="text-mute my-0">Total Balance</p>
+                            </div>
+                            <div class="col-auto">
+                                <h3 class="my-0 font-weight-normal">${{ balance }}</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-content card-content-padding bg-none">
+                        <div class="row">
+                            <div class="col text-align-right">
+                                <p>${{loss}} <i class="material-icons text-color-red vm small">arrow_downward</i></p>
+                            </div>
+                            <div class="col border-left-dotted">
+                                <p><i class="material-icons text-color-green vm small mr-1">arrow_upward</i>${{gain}} </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="card shadow bg-template border-0 col-auto" style="margin: auto; width: 150px">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col" style="padding: 0">
+                                    <a href="/fund/" style="color: #fff"><p class="text-align-center">Fund</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card shadow bg-template border-0 col-auto" style="margin: auto; width: 150px">
+                        <div class="card-content card-content-padding">
+                            <div class="row">
+                                <div class="col">
+                                    <a href="/withdraw/" style="color: #fff"><p class="text-align-center">Withdraw</p></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block mb-0 mt-2">
+                <div class="card shadow mt-2 h-200 o-hidden">
+                    <div class="h-200">
+                        <canvas id="linechart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="card mb-0 shadow" style="border: 2px solid #f2f5fe; border-radius: 10px; background: #F2F5FE; margin-bottom: 0; height: 200px; overflow: hidden">
+                    <div class="card-content card-content-padding">
+                        <h5 style="margin-top: -3px; color: #2F55D4; font-size: 18px; font-weight: bold">AI Traded Assets</h5>
+                        <p class="text-mute text-primary my-0 mb-2" style="font-size: 16px; color: #2F55D4">Artificial intelligence keeps trade <br>on your assets profitable. <br> From as low as $1.</p>
+                        <div class="row">
+                            <div class="card shadow bg-template border-0 col-auto" style="margin-left: 10px; margin-right: 10px; width: 150px">
+                                <div class="card-content card-content-padding">
+                                    <div class="row">
+                                        <div class="col" style="padding: 0; width: 100px">
+                                            <a href="/fund/" style="color: #fff"><p class="text-align-center">Read more</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto" style="margin-top: -60px; margin-right: -40px">
+                                <img src="img/icons/automated_currency_robot.png" alt="" style="width: 210px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="card mb-0 shadow" style="border: 2px solid #f2f5fe; border-radius: 10px; background: #F2F5FE; margin-bottom: 0; height: 200px; overflow: hidden">
+                    <div class="card-content card-content-padding">
+                        <h5 style="margin-top: -3px; color: #2F55D4; font-size: 18px; font-weight: bold">Secured Investments</h5>
+                        <p class="text-mute text-primary my-0 mb-2" style="font-size: 16px; color: #2F55D4">Learn how your funds are secured. <br> Read about Tether.</p>
+                        <div class="row">
+                            <div class="card shadow bg-template border-0 col-auto" style="margin-left: 10px; margin-right: 10px; width: 150px">
+                                <div class="card-content card-content-padding">
+                                    <div class="row">
+                                        <div class="col" style="padding: 0;">
+                                            <a href="/fund/" style="color: #fff"><p class="text-align-center">Read more</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto" style="margin-top: -40px; margin-right: -10px">
+                                <img src="img/icons/secured_phone.png" alt="" style="height: 150px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="card mb-0 shadow" style="border: 2px solid #f2f5fe; border-radius: 10px; background: #F2F5FE; margin-bottom: 0; height: 200px; overflow: hidden">
+                    <div class="card-content card-content-padding">
+                        <h5 style="margin-top: -3px; color: #2F55D4; font-size: 18px; font-weight: bold">Decentralized Trading</h5>
+                        <p class="text-mute text-primary my-0 mb-2" style="font-size: 16px; color: #2F55D4">Learn more about the Sayvers app.<br> Read our FAQS.</p>
+                        <div class="row">
+                            <div class="card shadow bg-template border-0 col-auto" style="margin-left: 10px; margin-right: 10px; width: 150px">
+                                <div class="card-content card-content-padding">
+                                    <div class="row">
+                                        <div class="col" style="padding: 0;">
+                                            <a href="/fund/" style="color: #fff"><p class="text-align-center">Read more</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto" style="margin-right: -40px">
+                                <img src="img/icons/world_map.png" alt="" style="width: 200px">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+    return {
+        data: function(){
+            return {
+                balance: '20,000',
+                gain: '10,750.00',
+                loss: '0.00'
+            }
+        },
+
+        methods: {
+            
+        }
+    }
+</script>
+
